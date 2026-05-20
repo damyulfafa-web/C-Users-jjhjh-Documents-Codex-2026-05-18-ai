@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: talkstore-nutrition-chatbot
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: STORE_URL
+        sync: false
+      - key: EXPERT_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false

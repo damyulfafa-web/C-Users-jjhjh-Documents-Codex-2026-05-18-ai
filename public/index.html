@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>맞춤 영양 챗봇 데모</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="chat-shell" aria-label="맞춤 영양 챗봇">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Kakao TalkStore</p>
+            <h1>맞춤 영양 상담</h1>
+          </div>
+          <span class="status">상담 가능</span>
+        </header>
+
+        <div id="messages" class="messages"></div>
+
+        <div id="quickReplies" class="quick-replies"></div>
+
+        <form id="chatForm" class="composer">
+          <input
+            id="messageInput"
+            type="text"
+            autocomplete="off"
+            placeholder="예: 문진 시작"
+            aria-label="메시지 입력"
+          />
+          <button type="submit">전송</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/public/app.js"></script>
+  </body>
+</html>
